@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function show() {
+            console.log(arguments);
+            // ES5转数组
+            let a = Array.prototype.slice.call(arguments);
+            console.log(a);
+
+            // ES6转数组
+            let b = Array.from(arguments);
+            console.log(b);
+        }
+        show(11,22,13,24,555)
+
+        // 箭头函数中没有arguments
+        let fn = (...args) => {
+            console.log(args)
+        }
+        fn("apple", "banana");
+
+
+        let arr = [1,2,3,4,5];
+        let res = arr.push(666);
+        console.log(res, arr);
+
+        let res2 = arr.pop();
+        console.log(res2, arr);
+
+
+    </script>
+</body>
+</html>

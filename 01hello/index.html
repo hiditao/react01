@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 1. 依次按顺序引入react、react-dom，babel顺序无关-->
+     <!-- ReactDOM was loaded before React. 
+    Make sure you load the React package before loading ReactDO -->
+    <script src="./bower_components/react/react.development.js"></script>
+    <script src="./bower_components/react/react-dom.development.js"></script>
+    <script src="./bower_components/babel/browser.js"></script>
+</head>
+<body>
+    <!-- 2. 声明一个标签 -->
+    <div id="root"></div>
+
+    <!-- 3. 挂载React实例对象 -->
+    <!-- babel用于将jsx转为纯JS代码，以便于浏览器能够识别 -->
+    <script type="text/babel">
+        // 参数1： 是JSX，用来描述显示的内容
+        // 参数2：挂载React实例的标签
+        ReactDOM.render(
+            <div>显示的内容</div>,   
+            document.getElementById("root")
+        );
+    </script>
+    
+</body>
+</html>

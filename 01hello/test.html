@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 引入js文件 -->
+    <!-- <script src="./mymodule.js"></script>
+    <script>
+        // 执行js文件内部的函数
+        show();
+    </script> -->
+
+    <script type="module">
+
+        // 导入模块，前提是script的type值为module
+        import People from "./mymodule.js";
+
+        new People();
+
+    </script>
+</body>
+</html>
